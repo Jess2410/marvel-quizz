@@ -1,5 +1,5 @@
-import app from 'firebase/app';
-import 'firebase/auth';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
 
 const config = {
     apiKey: "AIzaSyB9xsRu40mQ4B8DT_U2flFsLxYwEymjgsA",
@@ -12,8 +12,8 @@ const config = {
 
 class Firebase {
     constructor(){
-             app.initializeApp(config);
-             this.auth = app.auth()
+             firebase.initializeApp(config);
+             this.auth = firebase.auth()
     }
   //inscription
   signupUser = (email,password)=>
